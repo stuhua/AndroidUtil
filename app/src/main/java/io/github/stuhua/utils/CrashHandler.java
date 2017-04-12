@@ -1,4 +1,4 @@
-package io.github.stuhua.utils.LogUtils;
+package io.github.stuhua.utils;
 
 import java.io.BufferedWriter;
 import java.io.File;
