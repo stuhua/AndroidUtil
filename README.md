@@ -14,7 +14,7 @@
 
 - SharedPreference
 
->[SPUtils](./app/src/main/java/io/github/stuhua/utils/LogUtils.java),[CrashHandler](./app/src/main/java/io/github/stuhua/utils/SPUtils.java)
+>[SPUtils](./app/src/main/java/io/github/stuhua/utils/SPUtils.java)
 
 # 演示
 
