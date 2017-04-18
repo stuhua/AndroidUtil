@@ -30,6 +30,8 @@
 
 # CHANGELOG
 
+http://www.jianshu.com/p/c8e5ec204096
+
 
 
 
