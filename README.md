@@ -30,6 +30,12 @@
 
 # CHANGELOG
 
+延迟类：TimerTask，ScheduledThreadPoolExecutor
+
+倒计时类：CountDownTimer
+
+定时类：handler.sendMessageAtTime、AlarmManager
+
 http://www.jianshu.com/p/c8e5ec204096
 
 
