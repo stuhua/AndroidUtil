@@ -32,7 +32,7 @@
 
 延迟类：TimerTask，ScheduledThreadPoolExecutor
 
-倒计时类：CountDownTimer
+倒计时类：CountDownTimer（收到验证码）
 
 定时类：handler.sendMessageAtTime、AlarmManager
 
