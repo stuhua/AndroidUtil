@@ -16,13 +16,14 @@
 
 >[SPUtils](./app/src/main/java/io/github/stuhua/utils/SPUtils.java)
 
-- getRntime执行cmd命令
+- Runtime.getRuntime().exec工具类
 
 - 数据库工具类
 
 - 换肤工具类
 
 - aidl工具类 
+
 
 # 演示
 
