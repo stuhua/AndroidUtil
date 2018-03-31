@@ -18,7 +18,8 @@ public class ExampleUnitTest {
     }
     @Test
     public void test(){
+//        System.out.println("1 = "+(byte)0xFFFFFl+", 2 = "+0xFFFFF000);
         byte[] buffer={0x12,0x12,0x12,0x12,0x12,0x12};
-        System.out.print(ByteUtils.byte2Long(buffer));
+        System.out.print(ByteUtils.byte2Hex(ByteUtils.int2Byte(0xFFFFFFFfl)));
     }
 }

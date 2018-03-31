@@ -60,31 +60,36 @@ public class ByteUtils {
      * @param data
      * @return
      */
-    public static byte[] int2Byte(int data) {
-        if (data < 0 || data > 0xFFFFFFFF) {
+    public static byte[] int2Byte(float data) {
+        if (data < 0 || data > 0xFFFFFFFFl) {
+            System.out.println("0");
             return null;
         }
         byte[] bytes = null;
         int len = 0;
-        if (data <= 0xFF) {
+        if (data <= 0xFFl) {
+            len = 1;
             bytes = new byte[len];
             for (int i = 0; i < len; i++) {
-                bytes[i] = (byte) ((data >> (8 * (len - i - 1))) & 0xFF);
+                bytes[i] = (byte) (((int)data >> (8 * (len - i - 1))) & 0xFF);
             }
-        } else if (data <= 0xFFFF) {
+        } else if (data <= 0xFFFFl) {
+            len = 2;
             bytes = new byte[len];
             for (int i = 0; i < len; i++) {
-                bytes[i] = (byte) ((data >> (8 * (len - i - 1))) & 0xFF);
+                bytes[i] = (byte) (((int)data >> (8 * (len - i - 1))) & 0xFF);
             }
-        } else if (data <= 0xFFFFFF) {
+        } else if (data <= 0xFFFFFFl) {
+            len = 3;
             bytes = new byte[len];
             for (int i = 0; i < len; i++) {
-                bytes[i] = (byte) ((data >> (8 * (len - i - 1))) & 0xFF);
+                bytes[i] = (byte) (((int)data >> (8 * (len - i - 1))) & 0xFF);
             }
         } else {
+            len = 4;
             bytes = new byte[len];
             for (int i = 0; i < len; i++) {
-                bytes[i] = (byte) ((data >> (8 * (len - i - 1))) & 0xFF);
+                bytes[i] = (byte) (((int)data >> (8 * (len - i - 1))) & 0xFF);
             }
         }
         return bytes;
