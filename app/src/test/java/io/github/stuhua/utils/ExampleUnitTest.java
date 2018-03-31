@@ -2,6 +2,8 @@ package io.github.stuhua.utils;
 
 import org.junit.Test;
 
+import java.io.IOException;
+
 import convert.ByteUtils;
 
 import static org.junit.Assert.assertEquals;
@@ -20,6 +22,10 @@ public class ExampleUnitTest {
     public void test(){
 //        System.out.println("1 = "+(byte)0xFFFFFl+", 2 = "+0xFFFFF000);
         byte[] buffer={0x12,0x12,0x12,0x12,0x12,0x12};
-        System.out.print(ByteUtils.byte2Hex(ByteUtils.int2Byte(0xFFFFFFFfl)));
+        try {
+            System.out.print(ByteUtils.byteArray2Int(buffer));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
