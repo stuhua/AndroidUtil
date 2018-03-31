@@ -16,6 +16,14 @@
 
 >[SPUtils](./app/src/main/java/io/github/stuhua/utils/SPUtils.java)
 
+- getRntime执行cmd命令
+
+- 数据库工具类
+
+- 换肤工具类
+
+- aidl工具类 
+
 # 演示
 
 # TODO
