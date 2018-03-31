@@ -24,6 +24,7 @@
 
 - aidl工具类 
 
+- recycleview适配器工具类
 
 # 演示
 
