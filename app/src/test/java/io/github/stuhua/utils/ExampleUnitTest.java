@@ -2,9 +2,9 @@ package io.github.stuhua.utils;
 
 import org.junit.Test;
 
-import java.io.IOException;
+import java.io.File;
 
-import convert.ByteUtils;
+import file.FileUtils;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,12 +20,7 @@ public class ExampleUnitTest {
     }
     @Test
     public void test(){
-//        System.out.println("1 = "+(byte)0xFFFFFl+", 2 = "+0xFFFFF000);
-        byte[] buffer={0x12,0x12,0x12,0x12,0x12,0x12};
-        try {
-            System.out.print(ByteUtils.byteArray2Int(buffer));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File file =new File("D:/Liulh/Coding/AS/AndroidUtil/app/src/test/java/io/github/stuhua/utils/12.txt");
+        FileUtils.getFileLines(file);
     }
 }

@@ -1,3 +1,5 @@
+package file;
+
 import android.annotation.SuppressLint;
 
 import java.io.BufferedInputStream;
@@ -16,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import convert.CloseUtils;
-import file.FileIOUtils;
 
 /**
  * <pre>
