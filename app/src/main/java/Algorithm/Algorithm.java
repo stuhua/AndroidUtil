@@ -55,4 +55,28 @@ public class Algorithm {
      * 设计思路与 标号1-n的n个人首尾相接，1到3报数，报到3的退出，求最后一个人的标号 相同
      * 声明一个标记数组存放字符串的信息
      */
+
+    /**
+     * 快速排序,挖坑填数+分治法：
+     */
+    void quick_sort(int s[], int _left, int _right) {
+        if (_left < _right) {
+            //Swap(s[l], s[(l + r) / 2]); //将中间的这个数和第一个数交换 参见注1
+            int left = _left, right = _right, temp = s[_left];
+            while (left < right) {
+                while (left < right && s[right] >= temp) // 从右向左找第一个小于x的数
+                    right--;
+                if (left < right)
+                    s[left++] = s[right];
+
+                while (left < right && s[left] < temp) // 从左向右找第一个大于等于x的数
+                    left++;
+                if (left < right)
+                    s[right--] = s[left];
+            }
+            s[left] = temp;
+            quick_sort(s, _left, left - 1); // 递归调用
+            quick_sort(s, left + 1, _right);
+        }
+    }
 }
