@@ -2,10 +2,6 @@ package io.github.stuhua.utils;
 
 import org.junit.Test;
 
-import java.io.File;
-
-import file.FileUtils;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -18,9 +14,14 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
     @Test
-    public void test(){
-        File file =new File("D:/Liulh/Coding/AS/AndroidUtil/app/src/test/java/io/github/stuhua/utils/12.txt");
-        FileUtils.getFileLines(file);
+    public void test() {
+        int gap = 1;
+        int len = 10;
+        while (gap < len / 3) {          //动态定义间隔序列
+            gap = gap * 3 + 1;
+        }
+        System.out.println("gap = " + gap+", "+Math.floor(1));
     }
 }
