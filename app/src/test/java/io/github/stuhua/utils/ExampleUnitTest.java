@@ -20,6 +20,7 @@ public class ExampleUnitTest {
     @Test
     public void test() throws Exception {
         int [] _array={80,90,60,12,42,30,68,85,10};
+
 //       int[] array =  Algorithm.quick_sort(_array,0,8);
         int[] array =  Algorithm.shellSort(_array);
         for(int i=0;i<array.length;i++){
