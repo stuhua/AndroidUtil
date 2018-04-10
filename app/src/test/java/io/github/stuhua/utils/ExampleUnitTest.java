@@ -2,6 +2,8 @@ package io.github.stuhua.utils;
 
 import org.junit.Test;
 
+import Algorithm.Algorithm;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -16,12 +18,13 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void test() {
-        int gap = 1;
-        int len = 10;
-        while (gap < len / 3) {          //动态定义间隔序列
-            gap = gap * 3 + 1;
+    public void test() throws Exception {
+        int [] _array={80,90,60,12,42,30,68,85,10};
+//       int[] array =  Algorithm.quick_sort(_array,0,8);
+        int[] array =  Algorithm.shellSort(_array);
+        for(int i=0;i<array.length;i++){
+            System.out.println(array[i]);
         }
-        System.out.println("gap = " + gap+", "+Math.floor(1));
+        System.out.println(Algorithm.binarySearch(array,80));
     }
 }

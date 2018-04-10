@@ -61,7 +61,7 @@ public class Algorithm {
     /**
      * 快速排序,挖坑填数+分治法：
      */
-    void quick_sort(int s[], int _left, int _right) {
+    public static int[] quick_sort(int s[], int _left, int _right) {
         if (_left < _right) {
             //Swap(s[l], s[(l + r) / 2]); //将中间的这个数和第一个数交换 参见注1
             int left = _left, right = _right, temp = s[_left];
@@ -80,12 +80,13 @@ public class Algorithm {
             quick_sort(s, _left, left - 1); // 递归调用
             quick_sort(s, left + 1, _right);
         }
+        return s;
     }
 
     /**
      * 希尔排序
      */
-    public int[] sort(int[] sourceArray) throws Exception {
+    public static int[] shellSort(int[] sourceArray) throws Exception {
         // 对 arr 进行拷贝，不改变参数内容
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
 
@@ -107,5 +108,21 @@ public class Algorithm {
             gap = (int) Math.floor(gap / 3);
         }
         return arr;
+    }
+    //--------------------查找
+
+    public static int binarySearch(int[] array, int key) {
+        int left = 0, right = array.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (array[mid] == key) {
+                return mid;
+            } else if (array[mid] > key) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
     }
 }
