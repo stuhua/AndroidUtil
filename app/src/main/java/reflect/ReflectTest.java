@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
  */
 
 public class ReflectTest {
+    //反射框架 https://github.com/jOOQ/jOOR
     //获取类：3种方法
 
     /**
@@ -44,7 +45,6 @@ public class ReflectTest {
     public static void getClassMethod2() {
         Class<?> class1 = String.class;
         System.out.println(class1);
-
     }
 
     /**
