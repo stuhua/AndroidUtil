@@ -1,5 +1,6 @@
 package reflect;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
 /**
@@ -19,9 +20,20 @@ public class ReflectTest {
             //取得本类的全部属性
             Field[] field = class1.getDeclaredFields();
             for (Field field2 : field) {
-                System.out.println( field2 );
+                System.out.println(field2);
             }
-        } catch (ClassNotFoundException e) {
+            //创建实例
+            //无参构造函数
+            Object object = class1.newInstance();
+
+            //有参构造函数：一个参数
+            Constructor<?> constructor = class1.getDeclaredConstructor(String.class);
+            constructor.newInstance("1000");
+
+            //有参构造函数：二个参数
+            Constructor<?> constructor2 = class1.getDeclaredConstructor(String.class, String.class);
+            constructor2.newInstance("1001", "jack");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
