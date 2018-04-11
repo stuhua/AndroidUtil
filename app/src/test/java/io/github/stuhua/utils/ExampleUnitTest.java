@@ -3,6 +3,7 @@ package io.github.stuhua.utils;
 import org.junit.Test;
 
 import Algorithm.Algorithm;
+import reflect.ReflectTest;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,5 +28,10 @@ public class ExampleUnitTest {
             System.out.println(array[i]);
         }
         System.out.println(Algorithm.binarySearch(array,80));
+    }
+
+    @Test
+    public void test1(){
+        ReflectTest.getClassMethod1();
     }
 }
