@@ -36,6 +36,8 @@
 
 - 反射工具类
 
+- 死锁介绍，包括notify notifyall的区别
+
 # 演示
 
 # TODO
