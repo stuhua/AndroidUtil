@@ -26,4 +26,10 @@ public class DeadLockDemo {
         buf.remove(i);
         notify();
     }
+    //-------------------------------------------------------------
+    //问题1
+    /**
+     * 至少需要C1,C2,P1三个线程
+     * 1. C1，C2在wait前，C1被P1 notify，remove掉一个，C2再次remove会报IndexArrayOutOfBoundsException异常
+     */
 }
