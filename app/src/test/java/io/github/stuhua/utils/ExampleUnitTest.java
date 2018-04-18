@@ -2,8 +2,12 @@ package io.github.stuhua.utils;
 
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import Algorithm.Algorithm;
-import reflect.ReflectTest;
+import convert.StreamUtils;
 
 import static org.junit.Assert.assertEquals;
 
@@ -32,6 +36,18 @@ public class ExampleUnitTest {
 
     @Test
     public void test1(){
-        ReflectTest.getClassMethod1();
+        try {
+            File file =new File("F:/test.txt");
+            FileInputStream fis = new FileInputStream(file);
+            StreamUtils.input2OutputStream(fis);
+            System.out.println("MAX_VALUE = "+Integer.MAX_VALUE);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void test2(){
+        String[] strings = "Launcher.java".split("\\.");
+        System.out.println("len = "+strings.length);
     }
 }

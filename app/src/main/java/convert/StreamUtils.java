@@ -32,6 +32,7 @@ public class StreamUtils {
             byte[] b = new byte[MemoryConstants.KB];
             int len;
             while ((len = is.read(b, 0, MemoryConstants.KB)) != -1) {
+                System.out.print("len = "+len);
                 os.write(b, 0, len);
             }
             return os;
