@@ -24,7 +24,7 @@ public class ViewUtils {
     }
 
     /**
-     * Bitmap to bytes.
+     * Bitmap to bytes.,createScaledBitmap
      *
      * @param bitmap The bitmap.
      * @param format The format of bitmap.
