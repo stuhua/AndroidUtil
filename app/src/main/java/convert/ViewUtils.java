@@ -120,7 +120,9 @@ public class ViewUtils {
      * @return bitmap
      */
     public static Bitmap view2Bitmap(final View view) {
-        if (view == null) return null;
+        if (view == null) {
+            return null;
+        }
         Bitmap ret =
                 Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(ret);
