@@ -60,6 +60,9 @@
 
 http://www.jianshu.com/p/c8e5ec204096
 
+du -mh + 文件名 查看文件大小
+busybox unzip + 文件名 解压文件
+
 
 
 
