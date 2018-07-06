@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 通用的RecyclerView 的Adapter
- * Created by zhangxutong .
- * Date: 16/03/11
- */
+import io.github.stuhua.utils.LogUtils;
+
+
 public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     protected Context mContext;
     protected int mLayoutId;
@@ -41,6 +39,7 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
+        LogUtils.print("onCreateViewHolder");
         ViewHolder viewHolder = ViewHolder.get(mContext, null, parent, mLayoutId, -1);
         //add by zhangxutong 2016 08 05 begin ,for 点击事件为了兼容HeaderView FooterView 的Adapter
         if (null == mRv) {
@@ -96,6 +95,7 @@ public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        LogUtils.print("position = " + position);
         holder.updatePosition(position);
         //add by zhangxutong 2016 08 05 begin 点击事件为了兼容HeaderView FooterView 的Adapter，所以在OnBindViewHolder里，其实性能没有onCreate好
         setListener(position, holder);

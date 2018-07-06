@@ -21,6 +21,8 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import io.github.stuhua.utils.LogUtils;
+
 /**
  * 通用的RecyclerView 的ViewHolder ，使用者无需关心
  * Created by zhangxutong .
@@ -53,6 +55,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
 
     public static ViewHolder get(Context context, View convertView,
                                  ViewGroup parent, int layoutId, int position) {
+        LogUtils.print("convertView = "+convertView+", layoutId = "+layoutId+", position = "+position);
         if (convertView == null) {
             View itemView = LayoutInflater.from(context).inflate(layoutId, parent,
                     false);
